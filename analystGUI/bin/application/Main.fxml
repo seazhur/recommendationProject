@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane id="background" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="917.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <HBox fx:id="topbar" alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="100.0" prefWidth="565.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="search" alignment="CENTER" prefHeight="100.0" prefWidth="857.0" HBox.hgrow="SOMETIMES">
+               <children>
+                  <TextField fx:id="textbar" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="40.0" prefWidth="700.0" promptText="Enter a specific title or genre...">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="10.0" top="20.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
+                  <Button fx:id="submit" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Find" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.1894736886024475" green="0.17894737422466278" blue="0.17894737422466278" />
+               </color>
+            </DropShadow>
+         </effect>
+      </HBox>
+   </top>
+   <left>
+      <VBox fx:id="sidebar" alignment="CENTER_LEFT" onMouseClicked="#resizeSideBarClicked" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.47">
+               <color>
+                  <Color red="0.3105263113975525" green="0.23404483497142792" blue="0.23404483497142792" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <TreeView id="watchHistory" fx:id="watchHistory" onMouseClicked="#resizeSideBarClicked" onMouseExited="#resizeSideBarClosed" prefWidth="70.0" showRoot="false" stylesheets="@application.css" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></TreeView>
+         </children></VBox>
+   </left>
+   <center>
+      <GridPane id="background1" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+          <RowConstraints maxHeight="230.39999389648438" minHeight="10.0" percentHeight="9.0" prefHeight="49.19996643066406" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="91.0" prefHeight="422.80003356933594" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane fx:id="carousel" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="137.20001220703125" minWidth="10.0" percentWidth="25.0" prefWidth="79.5999755859375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.400048828125" minWidth="10.0" percentWidth="50.0" prefWidth="218.400048828125" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="115.5999755859375" minWidth="10.0" percentWidth="25.0" prefWidth="105.199951171875" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="260.1999816894531" minHeight="10.0" percentHeight="10.0" prefHeight="260.1999816894531" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="260.1999816894531" minHeight="10.0" percentHeight="50.0" prefHeight="260.1999816894531" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="102.79998779296875" minHeight="10.0" percentHeight="25.0" prefHeight="62.800018310546875" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button id="submit" fx:id="left" mnemonicParsing="false" onMouseClicked="#right" text=" &lt; " GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="submit" fx:id="right" mnemonicParsing="false" onMouseClicked="#left" text=" &gt; " GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <AnchorPane fx:id="secondary1" prefHeight="200.0" prefWidth="200.0" styleClass="contentField" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="10.0" right="10.0" top="70.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Label id="label" fx:id="secondaryLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="66.0" text="Label" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="27.0" />
+                        <Label id="label" fx:id="title1" alignment="CENTER" layoutX="29.0" layoutY="6.0" text="Label" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="primary" prefHeight="200.0" prefWidth="200.0" styleClass="contentField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label id="label1" fx:id="primaryLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="116.0" text="Label" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="29.0" />
+                        <Label id="label1" fx:id="title2" alignment="CENTER" layoutX="92.0" layoutY="14.0" text="Label" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <AnchorPane fx:id="secondary2" prefHeight="200.0" prefWidth="200.0" styleClass="contentField" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="70.0" left="10.0" right="10.0" top="70.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Label id="label" fx:id="secondaryLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="66.0" text="Label" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="29.0" />
+                        <Label id="label" fx:id="title3" alignment="CENTER" layoutX="30.0" layoutY="14.0" text="Label" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <BarChart fx:id="bargraph" legendVisible="false" GridPane.rowIndex="2">
+              <xAxis>
+                <CategoryAxis label="Title" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Views" side="LEFT" />
+              </yAxis>
+               <GridPane.margin>
+                  <Insets bottom="50.0" left="20.0" right="20.0" top="10.0" />
+               </GridPane.margin>
+            </BarChart>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <TextField id="textbar" fx:id="yearField" layoutX="99.0" layoutY="12.0" promptText="Enter a specific year..." AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="129.4" AnchorPane.topAnchor="12.0" />
+                  <Button id="submit" fx:id="yearEnter" layoutX="303.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#enterClicked" text="Enter" AnchorPane.rightAnchor="56.599999999999994" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+            <MenuButton id="menubutton" contentDisplay="CENTER" mnemonicParsing="false" text="Top Ten Shows" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <TitledPane fx:id="popup" animated="false" minWidth="0.0" text="untitled" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane id="popup" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="915.0" visible="false">
+               <children>
+                  <Button id="submit" layoutX="410.6" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#closePopup" prefHeight="25.0" prefWidth="115.0" text="Close" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="400.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label id="message" fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="444.0" layoutY="56.0" prefHeight="50.0" text="Label" textAlignment="CENTER" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </bottom>
+</BorderPane>

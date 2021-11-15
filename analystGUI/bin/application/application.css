@@ -1,0 +1,118 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#topbar{
+ 	 -fx-background-color: #333;
+  	
+}
+
+#search{
+}
+
+#textbar{
+	-fx-font-family: 'verdana';
+	-fx-font-size: 15px;
+	-fx-text-fill: #555;
+	-fx-effect:innershadow(gaussian,#444, 5, 0,0,0);
+}
+#submit:hover{
+	-fx-background-color: #555;
+}
+#submit{
+	-fx-background-color: #333;
+	-fx-background-radius: 23px;
+	-fx-border-color: #ddd;
+	-fx-border-width: 2px;
+	-fx-border-style: solid;
+	-fx-border-radius: 20px;
+	-fx-text-fill: #ddd;
+	-fx-font-family: 'verdana';
+	-fx-font-size: 15px;
+	-fx-effect: dropshadow(gaussian,#777,10,0,0px,0px);
+}
+
+#menubutton{
+	-fx-background-radius: 23px;
+	-fx-border-color: #ddd;
+	-fx-border-width: 2px;
+	-fx-border-style: solid;
+	-fx-border-radius: 20px;
+	-fx-text-fill: #ddd;
+	-fx-font-family: 'verdana';
+	-fx-font-size: 15px;
+	-fx-effect: dropshadow(gaussian,#777,10,0,0px,0px);
+}
+#sidebar{
+	-fx-background-color: #500;
+}
+#dashboard{
+	-fx-background-color: #999;
+}
+
+.contentField{
+	-fx-border-color: #ddd;
+	-fx-background-radius: 9px;
+	-fx-background-color: #444;
+	-fx-border-width: 2px;
+	-fx-border-style: solid;
+	-fx-border-radius: 9px;
+	-fx-effect: dropshadow(gaussian,#444,50,.1,0px,10px);
+}
+#background{
+	-fx-background-color: #333;
+}
+#background1{
+	-fx-background-color: #999;
+}
+
+#watchHistory{
+	-fx-font-family: 'verdana';
+	-fx-font-size: 15px;
+}
+#watchHistory .tree-cell {
+	-fx-background-color: #500;
+    -fx-text-fill: #eee;
+}
+#rowTitle
+{
+    -fx-text-fill: #eee;
+    -fx-font-family: 'verdana';
+	-fx-font-size: 20px;
+	-fx-border-radius: 9px;
+}
+#titlePane
+{
+	-fx-background-color: #400;
+	-fx-border-color: #333;
+	-fx-border-width: 0px 0.0px 5px 0px;
+	-fx-border-style: solid;
+	
+}
+#label
+{
+    -fx-text-fill: #eee;
+    -fx-font-family: 'verdana';
+	-fx-font-size: 15px;
+}
+#label1
+{
+    -fx-text-fill: #eee;
+    -fx-font-family: 'verdana';
+	-fx-font-size: 15px;
+}
+#message
+{
+    -fx-text-fill: #333;
+    -fx-font-family: 'verdana';
+	-fx-font-size: 20px;
+}
+#popup
+{
+	-fx-background-color: #888;
+}
+#row
+{
+	-fx-background-color: #400;
+	-fx-border-color: #333;
+	-fx-border-width: 0px 0.0px 5px 0px;
+	-fx-border-style: solid;
+}
