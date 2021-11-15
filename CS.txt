@@ -1,0 +1,4 @@
+csce315905_10db
+jdbc:postgresql://csce-315-db.engr.tamu.edu/
+csce315905_10user
+90510
